@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GrowingHare'sMind — Lesson Concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --meadow:#EEF2E6;
+    --meadow-deep:#DCE6CE;
+    --clover:#5C7A54;
+    --clover-deep:#3F5A3A;
+    --butter:#F4C95D;
+    --clay:#4A4036;
+    --clay-soft:#7A6F60;
+    --white:#FFFDF8;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--meadow);
+    color:var(--clay);
+    font-family:'Atkinson Hyperlegible', sans-serif;
+    padding:32px 16px 70px;
+  }
+  h1,h2,.display{ font-family:'Fredoka', sans-serif; font-weight:600; color:var(--clover-deep); margin:0; }
+  .page-head{ max-width:960px; margin:0 auto 34px; text-align:center; }
+  .page-head h1{ font-size:26px; margin-bottom:8px; }
+  .page-head p{ color:var(--clay-soft); font-size:15px; }
+
+  .grid{
+    max-width:1000px; margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+  .card{
+    background:var(--white);
+    border-radius:20px;
+    padding:28px;
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:28px;
+    align-items:center;
+    box-shadow:0 12px 28px -16px rgba(63,90,58,.28);
+  }
+  @media (max-width:720px){ .card{ grid-template-columns:1fr; } }
+
+  .sketch-frame{
+    background:var(--meadow);
+    border-radius:14px;
+    aspect-ratio:1/1;
+    display:flex; align-items:center; justify-content:center;
+    padding:16px;
+  }
+  .sketch-frame svg{ width:100%; height:100%; }
+
+  .tag{
+    display:inline-block;
+    font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+    color:var(--clover); background:var(--meadow-deep);
+    padding:4px 10px; border-radius:999px; margin-bottom:10px;
+  }
+  .card h2{ font-size:20px; margin-bottom:4px; }
+  .card .skill{ font-size:13px; color:var(--clay-soft); margin-bottom:14px; }
+  .card .pitch{ font-size:15px; line-height:1.6; color:var(--clay); }
+  .card .pitch strong{ color:var(--clover-deep); }
+
+  .placeholder-row{
+    display:flex; gap:10px; margin-top:16px; flex-wrap:wrap;
+  }
+  .placeholder-tag{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:12px; color:var(--clay-soft);
+    background:var(--meadow);
+    border:1.5px dashed var(--meadow-deep);
+    padding:6px 12px; border-radius:999px;
+  }
+  .sketch-frame{ position:relative; }
+  .art-note{
+    position:absolute; top:8px; left:8px;
+    font-size:10px; font-weight:700; letter-spacing:.03em; text-transform:uppercase;
+    color:var(--clover); background:var(--white);
+    padding:3px 8px; border-radius:999px;
+    border:1px dashed var(--meadow-deep);
+  }
+</style>
+</head>
+<body>
+
+<div class="page-head">
+  <h1>Five wordless lesson concepts</h1>
+  <p>Early sketches, shared to gather feedback before anything gets built. Each one pairs a real hare's habitat or behavior with the math skill it teaches.</p>
+  <p style="margin-top:10px;"><a href="index.html" style="font-size:13px;color:var(--clay-soft);text-decoration:none;">← Back to the trail</a></p>
+</div>
+
+<div class="grid">
+
+  <!-- 1. European hare — Counting & place value -->
+  <div class="card" id="european">
+    <div class="sketch-frame"><span class="art-note">Sketch — art TBD</span>
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- loose clover leaves -->
+        <g>
+          <circle cx="30" cy="150" r="7" fill="#6C8C62"/>
+          <circle cx="48" cy="155" r="7" fill="#6C8C62"/>
+          <circle cx="30" cy="168" r="7" fill="#6C8C62"/>
+        </g>
+        <!-- a bundle of ten, tied -->
+        <g>
+          <rect x="90" y="40" width="34" height="130" rx="10" fill="#8FAE7F" stroke="#3F5A3A" stroke-width="2"/>
+          <line x1="90" y1="70" x2="124" y2="70" stroke="#3F5A3A" stroke-width="3"/>
+          <line x1="90" y1="110" x2="124" y2="110" stroke="#3F5A3A" stroke-width="3"/>
+          <line x1="90" y1="150" x2="124" y2="150" stroke="#3F5A3A" stroke-width="3"/>
+        </g>
+        <!-- second loose bundle forming -->
+        <g opacity="0.55">
+          <rect x="150" y="90" width="30" height="80" rx="9" fill="#DCE6CE" stroke="#8FAE7F" stroke-width="2" stroke-dasharray="4 4"/>
+        </g>
+        <circle cx="163" cy="185" r="6" fill="#6C8C62"/>
+        <circle cx="176" cy="180" r="6" fill="#6C8C62"/>
+      </svg>
+    </div>
+    <div>
+      <span class="tag">European hare</span>
+      <h2>Bundle the clover</h2>
+      <div class="skill">Counting &amp; place value</div>
+      <p class="pitch">Loose clover leaves scatter across the field. Every time ten collect in one place, they cinch together into a single bundle — <strong>ones quietly becoming a ten</strong> right in front of the child, with no number or word required to show what just happened.</p>
+      <div class="placeholder-row">
+        <span class="placeholder-tag">🎨 Final hare art — coming later</span>
+        <span class="placeholder-tag">🔊 Real voice narration — coming later</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. White-tailed jackrabbit — Addition & subtraction -->
+  <div class="card" id="jackrabbit">
+    <div class="sketch-frame"><span class="art-note">Sketch — art TBD</span>
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 160 Q 50 100 90 160" stroke="#5C7A54" stroke-width="3" fill="none" stroke-dasharray="2 10" stroke-linecap="round"/>
+        <path d="M90 160 Q 130 100 170 160" stroke="#5C7A54" stroke-width="3" fill="none" stroke-dasharray="2 10" stroke-linecap="round"/>
+        <circle cx="10" cy="160" r="5" fill="#3F5A3A"/>
+        <circle cx="90" cy="160" r="5" fill="#3F5A3A"/>
+        <circle cx="170" cy="160" r="5" fill="#3F5A3A"/>
+        <!-- joined single path underneath, glowing -->
+        <path d="M10 175 Q 90 130 170 175" stroke="#F4C95D" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <!-- jackrabbit silhouette -->
+        <g transform="translate(160,120)">
+          <ellipse cx="0" cy="10" rx="12" ry="8" fill="#3F5A3A"/>
+          <path d="M-4 2 C -8 -14, 2 -16, 0 -2" stroke="#3F5A3A" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+    <div>
+      <span class="tag">White-tailed jackrabbit</span>
+      <h2>Join the trails</h2>
+      <div class="skill">Addition &amp; subtraction</div>
+      <p class="pitch">Two separate hop-trails across the plain glow and <strong>fuse into one combined path</strong> — that's addition. Drag along a trail and watch a section lift away and vanish — that's subtraction. Same open landscape, two directions of the same motion.</p>
+      <div class="placeholder-row">
+        <span class="placeholder-tag">🎨 Final hare art — coming later</span>
+        <span class="placeholder-tag">🔊 Real voice narration — coming later</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Snowshoe hare — Multiplication -->
+  <div class="card" id="snowshoe">
+    <div class="sketch-frame"><span class="art-note">Sketch — art TBD</span>
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="10" width="180" height="180" rx="12" fill="#EAF1F1"/>
+        <!-- 3 rows of 4 paw prints -->
+        <g fill="#7A9BC4">
+          <ellipse cx="40" cy="45" rx="9" ry="13"/><ellipse cx="75" cy="45" rx="9" ry="13"/><ellipse cx="110" cy="45" rx="9" ry="13"/><ellipse cx="145" cy="45" rx="9" ry="13"/>
+          <ellipse cx="40" cy="100" rx="9" ry="13"/><ellipse cx="75" cy="100" rx="9" ry="13"/><ellipse cx="110" cy="100" rx="9" ry="13"/><ellipse cx="145" cy="100" rx="9" ry="13"/>
+          <ellipse cx="40" cy="155" rx="9" ry="13"/><ellipse cx="75" cy="155" rx="9" ry="13"/><ellipse cx="110" cy="155" rx="9" ry="13"/><ellipse cx="145" cy="155" rx="9" ry="13"/>
+        </g>
+        <rect x="20" y="25" width="150" height="45" rx="8" fill="none" stroke="#3F5A3A" stroke-width="2" stroke-dasharray="4 4"/>
+      </svg>
+    </div>
+    <div>
+      <span class="tag">Snowshoe hare</span>
+      <h2>Print the snow</h2>
+      <div class="skill">Multiplication</div>
+      <p class="pitch">A single row of paw prints presses into fresh snow. Drag it downward and it <strong>repeats itself</strong>, row after identical row, filling the field. The array of prints IS the multiplication — count the rows, count a row, see how the whole field fills.</p>
+      <div class="placeholder-row">
+        <span class="placeholder-tag">🎨 Final hare art — coming later</span>
+        <span class="placeholder-tag">🔊 Real voice narration — coming later</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Arctic hare — Fractions -->
+  <div class="card" id="arctic">
+    <div class="sketch-frame"><span class="art-note">Sketch — art TBD</span>
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="80" fill="#EAF1F1" stroke="#3F5A3A" stroke-width="2"/>
+        <path d="M100 100 L100 20 A80 80 0 0 1 169.3 60 Z" fill="#DCE6CE" stroke="#3F5A3A" stroke-width="1.5"/>
+        <path d="M100 100 L169.3 60 A80 80 0 0 1 169.3 140 Z" fill="#B8CFE0" stroke="#3F5A3A" stroke-width="1.5"/>
+        <path d="M100 100 L169.3 140 A80 80 0 0 1 100 180 Z" fill="#DCE6CE" stroke="#3F5A3A" stroke-width="1.5"/>
+        <path d="M100 100 L100 180 A80 80 0 0 1 30.7 140 Z" fill="#DCE6CE" stroke="#3F5A3A" stroke-width="1.5"/>
+        <path d="M100 100 L30.7 140 A80 80 0 0 1 30.7 60 Z" fill="#DCE6CE" stroke="#3F5A3A" stroke-width="1.5"/>
+        <path d="M100 100 L30.7 60 A80 80 0 0 1 100 20 Z" fill="#DCE6CE" stroke="#3F5A3A" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <div>
+      <span class="tag">Arctic hare</span>
+      <h2>Share the den</h2>
+      <div class="skill">Fractions</div>
+      <p class="pitch">The arctic hare's snow den splits into equal wedge-shaped rooms. <strong>One room glows</strong> while the rest stay plain — that one lit room, out of all the equal rooms, is the fraction. No numerator, no denominator symbol needed to see "this much out of this many."</p>
+      <div class="placeholder-row">
+        <span class="placeholder-tag">🎨 Final hare art — coming later</span>
+        <span class="placeholder-tag">🔊 Real voice narration — coming later</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Woolly hare — Geometry -->
+  <div class="card" id="woolly">
+    <div class="sketch-frame"><span class="art-note">Sketch — art TBD</span>
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 170 L55 70 L90 130 L120 40 L155 110 L190 170 Z" fill="#DCE6CE" stroke="#3F5A3A" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M55 70 L90 130 L120 40" stroke="#F4C95D" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="55" cy="70" r="4" fill="#3F5A3A"/>
+        <circle cx="90" cy="130" r="4" fill="#3F5A3A"/>
+        <circle cx="120" cy="40" r="4" fill="#3F5A3A"/>
+      </svg>
+    </div>
+    <div>
+      <span class="tag">Woolly hare</span>
+      <h2>Trace the ridge</h2>
+      <div class="skill">Geometry</div>
+      <p class="pitch">The woolly hare climbs a jagged mountain skyline. Trace between three peaks and a <strong>triangle lights up</strong> against the ridge behind it — angles, sides, and shapes discovered by literally walking the terrain, not by naming them.</p>
+      <div class="placeholder-row">
+        <span class="placeholder-tag">🎨 Final hare art — coming later</span>
+        <span class="placeholder-tag">🔊 Real voice narration — coming later</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
